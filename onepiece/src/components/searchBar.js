@@ -1,69 +1,30 @@
-import React, { useState } from 'react'
-
-
+import React, { useState } from 'react';
 const SearchBar = () => {
+    const [searchTerm, setSearchTerm] = useState('');
 
-    const [searchInput, setSearchInput] = useState("");
-
-    const countries = [
-
-        { name: "Belgium", continent: "Europe" },
-        { name: "India", continent: "Asia" },
-        { name: "Bolivia", continent: "South America" },
-        { name: "Ghana", continent: "Africa" },
-        { name: "Japan", continent: "Asia" },
-        { name: "Canada", continent: "North America" },
-        { name: "New Zealand", continent: "Australasia" },
-        { name: "Italy", continent: "Europe" },
-        { name: "South Africa", continent: "Africa" },
-        { name: "China", continent: "Asia" },
-        { name: "Paraguay", continent: "South America" },
-        { name: "Usa", continent: "North America" },
-        { name: "France", continent: "Europe" },
-        { name: "Botswana", continent: "Africa" },
-        { name: "Spain", continent: "Europe" },
-        { name: "Senegal", continent: "Africa" },
-        { name: "Brazil", continent: "South America" },
-        { name: "Denmark", continent: "Europe" },
-        { name: "Mexico", continent: "South America" },
-        { name: "Australia", continent: "Australasia" },
-        { name: "Tanzania", continent: "Africa" },
-        { name: "Bangladesh", continent: "Asia" },
-        { name: "Portugal", continent: "Europe" },
-
-    ];
-
-    const handleChange = (e) => {
-        e.preventDefault();
-        setSearchInput(e.target.value);
-    };
-
-    if (searchInput.length > 0) {
-        countries.filter((country) => {
-            return country.name.match(searchInput);
-        });
+    const handleSearchInputChanges = (event) => {
+        setSearchTerm(event.target.value);
     }
 
-    return <div>
+    const resetInputField = () => {
+        setSearchTerm('');
+    }
 
-        <input
-            type="search"
-            placeholder="Search here"
-            onChange={handleChange}
-            value={searchInput} />
+    const callSearchFunction = (event) => {
+        event.preventDefault();
+        // TODO: call search function with searchTerm as argument
+    }
 
-        <table>
-            <tr>
-                <th>Country</th>
-                <th>Continent</th>
-            </tr>
-
-            yes
-        </table>
-
-    </div>
-
-
-};
-
-export default SearchBar;
+    return (
+        <form className="search">
+            <input
+                value={searchTerm}
+                onChange={handleSearchInputChanges}
+                type="text"
+                placeholder="Guess a character!"
+            />
+            <button onClick={callSearchFunction} type="submit">Search</button>
+        </form>
+    );
+}
+export default SearchBar
