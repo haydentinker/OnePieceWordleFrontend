@@ -1,15 +1,24 @@
-import './App.css';
+import './css/App.css';
+import React from 'react';
 import './components/searchBar.js';
 import SearchBar from './components/searchBar';
+import Navbar from "./components/navBar";
 
 function App() {
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <h1>One Piece Wordle!</h1>
-        <SearchBar />
+     
+      <header>
+      <Navbar/>
+      <SearchBar />
       </header>
     </div>
+    <body class='yes'>
+  
+    </body>
+    <footer></footer>
+    </>
   );
 }
 
