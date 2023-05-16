@@ -11,11 +11,12 @@ const SearchBar = () => {
     }
 
     const callSearchFunction = (event) => {
-        event.preventDefault();
+        const newItem = { title: 'New item' };
+        setSearchTerm(searchTerm.concat(newItem));
         // TODO: call search function with searchTerm as argument
     }
 
-    return (
+    return (<>
         <form className="search">
             <input
                 value={searchTerm}
@@ -23,8 +24,12 @@ const SearchBar = () => {
                 type="text"
                 placeholder="Guess a character!"
             />
-            <button onClick={callSearchFunction} type="submit">Search</button>
+            <button onClick={callSearchFunction} type="submit">Guess</button>
         </form>
+        <div>
+            {searchTerm}
+        </div>
+    </>
     );
 }
 export default SearchBar
