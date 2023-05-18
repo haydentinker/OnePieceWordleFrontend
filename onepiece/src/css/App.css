@@ -1,21 +1,25 @@
 .App {
-  margin:0;
+  margin: 0;
   text-align: center;
   background-image: url('../images/sunnyBackground.jpg');
   background-color: grey;
   background-repeat: no-repeat;
   background-size: cover;
 }
-body{ background-image: url('../images/sunnyBackground.jpg');
+
+body {
+  background-image: url('../images/sunnyBackground.jpg');
   background-color: grey;
   background-repeat: no-repeat;
   background-size: cover;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
-footer{
+
+footer {
   background-color: transparent;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -25,4 +29,21 @@ footer{
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.card {
+  display: flex;
+  flex: 1;
+  /* Set display property to flex */
+  justify-content: space-evenly;
+  align-items: center;
+
+  /* Align items with space between */
+}
+
+.cardbox {
+  padding: 2%;
+  /* Distribute available space evenly among the boxes */
+  background-color: grey;
+
 }

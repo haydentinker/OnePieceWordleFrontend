@@ -1,26 +1,30 @@
 import './css/App.css';
 import React, { useState, useRef, useEffect } from 'react';
-import Navbar from "./components/navBar";
+import Navbar from './components/navBar';
 import GuessList from './components/guessList';
 
 const LOCAL_STORAGE_KEY = 'guesses';
 
 function App() {
   const guessRef = useRef();
+
   const [guesses, setGuesses] = useState([]);
 
   useEffect(() => {
-    const storedGuesses = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-    if (storedGuesses) setGuesses(storedGuesses);
+    const storedGuesses = localStorage.getItem(LOCAL_STORAGE_KEY);
+    if (storedGuesses) {
+      setGuesses(JSON.parse(storedGuesses));
+    }
   }, []);
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(guesses));
   }, [guesses]);
 
-  function callSearchFunction() {
+  function addGuess() {
     const name = guessRef.current.value;
-    setGuesses(prevGuesses => [...prevGuesses, { name: name }]);
+    const newGuess = { name: name, id: Date.now() };
+    setGuesses(prevGuesses => [...prevGuesses, newGuess]);
     guessRef.current.value = '';
   }
 
@@ -30,9 +34,10 @@ function App() {
         <header>
           <Navbar />
         </header>
-        <GuessList guesses={guesses} />
         <input ref={guessRef} type="text" />
-        <button onClick={callSearchFunction} type="submit">Guess</button>
+        <button onClick={addGuess} type="submit">Guess</button>
+        <GuessList guesses={guesses} />
+
       </div>
       <footer></footer>
     </>
