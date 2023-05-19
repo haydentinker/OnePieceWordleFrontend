@@ -8,14 +8,8 @@ const LOCAL_STORAGE_KEY = 'guesses';
 function App() {
   const guessRef = useRef();
 
-  const [guesses, setGuesses] = useState([]);
+  const [guesses, setGuesses] = useState(JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || []);
 
-  useEffect(() => {
-    const storedGuesses = localStorage.getItem(LOCAL_STORAGE_KEY);
-    if (storedGuesses) {
-      setGuesses(JSON.parse(storedGuesses));
-    }
-  }, []);
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(guesses));
@@ -36,6 +30,7 @@ function App() {
         </header>
         <input ref={guessRef} type="text" />
         <button onClick={addGuess} type="submit">Guess</button>
+
         <GuessList guesses={guesses} />
 
       </div>
