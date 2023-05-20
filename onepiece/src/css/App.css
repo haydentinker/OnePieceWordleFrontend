@@ -47,3 +47,9 @@ footer {
   background-color: grey;
 
 }
+
+.character_image {
+  height: 110px;
+  width: 60px;
+  padding-bottom: 2%;
+}
