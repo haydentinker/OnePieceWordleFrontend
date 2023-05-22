@@ -27,12 +27,12 @@ function App() {
       <div className="App">
         <header>
           <Navbar />
-        </header>
-        <input ref={guessRef} type="text" />
-        <button onClick={addGuess} type="submit">Guess</button>
+        </header><body>
+          <input ref={guessRef} type="text" />
+          <button onClick={addGuess} type="submit">Guess</button>
 
-        <GuessList guesses={guesses} />
-
+          <GuessList guesses={guesses} />
+        </body>
       </div>
       <footer></footer>
     </>
