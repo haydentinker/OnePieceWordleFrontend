@@ -1,6 +1,7 @@
 import {React,useState,useEffect} from 'react'
 import { IconButton, TextField, Typography, AppBar, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container } from '@mui/material';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
+import { GuessWrapper } from './components/GuessWrapper';
 const LOCAL_STORAGE_KEY='guesses';
 export const App = () => {
 
@@ -42,17 +43,12 @@ export const App = () => {
               </form>
               
             </div >
-            {guesses &&(
-                <>
-                <Typography align='center'>Guesses</Typography>
-                <ul>
-                  {guesses.map((item,index)=>(
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-                </>
-              )}
+            
+            
           </Container>
+          {guesses &&(
+              <GuessWrapper guesses={guesses} />
+              )}
         </div>
       </main>
     </>
