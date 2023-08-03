@@ -4,6 +4,7 @@ import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutl
 import { GuessHeader } from './components/GuessHeader';
 import { Guess } from './components/Guess';
 const LOCAL_STORAGE_KEY = 'guesses';
+
 export const App = () => {
 
   const [guesses, setGuesses] = useState(JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || []);
@@ -22,7 +23,7 @@ export const App = () => {
   }
   return (
     <>
-      <CssBaseline />
+
 
       <main>
         <div>
@@ -46,8 +47,8 @@ export const App = () => {
             </div >
 
             {guesses && (
-              <Box sx={{ marginTop: '5%', display: 'flex', justifyContent: 'center' }}>
-                <Grid container>
+              <Box sx={{ marginTop: '5%'}}>
+                <Grid container justifyContent={'center'}>
                   <GuessHeader />
                   <Guess guesses={guesses} />
                 </Grid>
