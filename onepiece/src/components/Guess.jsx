@@ -7,7 +7,7 @@ export const Guess = ({guesses}) => {
                 {guesses.map((item,index)=>(
                 <Grid container direction="row" rowSpacing={2} columnSpacing={5} alignItems={'center'}>
                 <Grid item xs={2}>
-                <Typography textAlign={"center"}>Character</Typography>
+                <Typography >Character</Typography>
                 </Grid>
                 <Grid item xs={2}>
                 <Typography>Name</Typography>

@@ -6,22 +6,22 @@ export const GuessHeader = () => {
     <>          
                 <Grid container direction="row" rowSpacing={2} columnSpacing={5}>
                 <Grid item xs={2}>
-                <Typography >Character</Typography>
+                <Typography sx={{textDecoration:'underline' }}paragraph>Character</Typography>
                 </Grid>
                 <Grid item xs={2}>
-                <Typography>Name</Typography>
+                <Typography sx={{textDecoration:'underline' }}paragraph >Name</Typography>
                 </Grid>
                 <Grid item xs={2}>
-                <Typography>Debut</Typography>
+                <Typography sx={{textDecoration:'underline' }}paragraph >Debut</Typography>
                 </Grid> 
                 <Grid item xs={2}>
-                <Typography>Affiliations</Typography>
+                <Typography sx={{textDecoration:'underline' }}paragraph >Affiliations</Typography>
                 </Grid>
                 <Grid item xs={2}>
-                <Typography>Occupation</Typography>
+                <Typography sx={{textDecoration:'underline' }}paragraph>Occupation</Typography>
                 </Grid>
                 <Grid item xs={2}>
-                <Typography>Birthday</Typography>
+                <Typography sx={{textDecoration:'underline' }}paragraph >Birthday</Typography>
                 </Grid>
                 </Grid>
         

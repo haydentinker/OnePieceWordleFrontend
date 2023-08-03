@@ -25,13 +25,13 @@ export const App = () => {
     <>
 
 
-      <main>
-        <div>
-          <Container maxWidth='md'>
-            <Typography variant="h1" align="center" color="textPrimary" wrap gutterBottom style={{ width: "100%", whiteSpace: 'nowrap' }}>
+      <main >
+        <div  >
+          <Container maxWidth='md' sx={{bgcolor:'background.default' }}>
+            <Typography variant="h1" align="center" color="primary" wrap gutterBottom style={{ width: "100%", whiteSpace: 'nowrap' }}>
               One Piece-dle
             </Typography>
-            <Typography variant='h5' align="center" color='textSecondary' paragraph>
+            <Typography variant='h5' align="center" color='secondary' paragraph>
               Guess today's One Piece character!
             </Typography>
             <div style={{ justifyContent: "center", alignItems: "center", display: "flex" }}>
