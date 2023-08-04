@@ -5,19 +5,19 @@ export const GuessHeader = () => {
   return (
     <>
       <Grid container direction="row" rowSpacing={2} columnSpacing={5}>
-        <Grid item xs={2}>
+        <Grid >
           <Typography sx={{ textDecoration: 'underline' }} paragraph>Character</Typography>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item >
           <Typography sx={{ textDecoration: 'underline' }} paragraph >Name</Typography>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item >
           <Typography sx={{ textDecoration: 'underline' }} paragraph >Debut</Typography>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item >
           <Typography sx={{ textDecoration: 'underline' }} paragraph >Affiliations</Typography>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item >
           <Typography sx={{ textDecoration: 'underline' }} paragraph>Occupation</Typography>
         </Grid>
       </Grid>

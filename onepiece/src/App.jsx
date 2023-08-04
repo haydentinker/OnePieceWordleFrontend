@@ -48,7 +48,7 @@ export const App = () => {
 
             {guesses && (
               <Box sx={{ marginTop: '5%' }}>
-                <Grid container justifyContent={'center'}>
+                <Grid container justifyContent={'center'}rowSpacing={2} columnSpacing={5}>
                   <GuessHeader />
                   <Guess guesses={guesses} />
                 </Grid>
