@@ -20,9 +20,6 @@ export const GuessHeader = () => {
                 <Grid item xs={2}>
                 <Typography sx={{textDecoration:'underline' }}paragraph>Occupation</Typography>
                 </Grid>
-                <Grid item xs={2}>
-                <Typography sx={{textDecoration:'underline' }}paragraph >Birthday</Typography>
-                </Grid>
                 </Grid>
         
                
