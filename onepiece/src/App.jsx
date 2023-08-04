@@ -27,7 +27,7 @@ export const App = () => {
 
       <main >
         <div  >
-          <Container maxWidth='md' sx={{bgcolor:'background.default' }}>
+          <Container maxWidth='md' sx={{ bgcolor: 'background.default' }}>
             <Typography variant="h1" align="center" color="primary" wrap gutterBottom style={{ width: "100%", whiteSpace: 'nowrap' }}>
               One Piece-dle
             </Typography>
@@ -47,7 +47,7 @@ export const App = () => {
             </div >
 
             {guesses && (
-              <Box sx={{ marginTop: '5%'}}>
+              <Box sx={{ marginTop: '5%' }}>
                 <Grid container justifyContent={'center'}>
                   <GuessHeader />
                   <Guess guesses={guesses} />
