@@ -6,11 +6,10 @@ const theme = createTheme({
     fontFamily: "Roboto, sans-serif",
   },
   spacing: 8,
-  // palette:{
-  //   background:{
-  //     default:'000FF',
-  //   }
-  // }
+  palette:{
+    
+    mode:'dark',
+  }
 });
 
 export default theme;

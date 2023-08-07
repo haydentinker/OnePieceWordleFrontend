@@ -4,7 +4,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 export const GuessHeader = () => {
   return (
     <>
-      <Grid container direction="row" columnSpacing={10} color={'primary.contrastText'}>
+      <Grid container direction="row" columnSpacing={10} color={'white'}>
         <Grid item >
           <Typography sx={{ textDecoration: 'underline' }} variant='h5'>Character</Typography>
         </Grid>

@@ -26,14 +26,14 @@ export const App = () => {
 
       <main >
         <div  >
-          <Container maxWidth='md' sx={{ bgcolor: 'primary.main'}}>
-            <Typography variant="h1" align="center" color="primary.contrastText" wrap gutterBottom style={{ width: "100%", whiteSpace: 'nowrap' }}>
+          <Container maxWidth='md' >
+            <Typography variant="h1" align="center" color="primary.main" wrap gutterBottom style={{ width: "100%", whiteSpace: 'nowrap' }}>
               One Piece-dle
             </Typography>
-            <Typography variant='h5' align="center" color='secondary.contrastText' paragraph>
+            <Typography variant='h5' align="center" color='secondary.main' paragraph>
               Guess today's One Piece character!
             </Typography>
-            <div style={{ justifyContent: "center", alignItems: "center", display: "flex" }}>
+            <div style={{ justifyContent: "center", alignItems: "center", display: "flex"}}>
               <form onSubmit={submitGuess}>
                 <TextField value={inputValue} id="outlined-basic" placeholder="Type character name" variant="outlined" size='large' onChange={handleInputChange}
                   InputProps={{
