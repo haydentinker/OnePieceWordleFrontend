@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from 'react'
-import { Box, IconButton, TextField, Typography, AppBar, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container } from '@mui/material';
+import { Box, IconButton, TextField, Typography, Grid, Toolbar, Container } from '@mui/material';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import { GuessHeader } from './components/GuessHeader';
 import { Guess } from './components/Guess';
@@ -24,14 +24,13 @@ export const App = () => {
   return (
     <>
 
-
       <main >
         <div  >
-          <Container maxWidth='md' sx={{ bgcolor: 'background.default' }}>
-            <Typography variant="h1" align="center" color="primary" wrap gutterBottom style={{ width: "100%", whiteSpace: 'nowrap' }}>
+          <Container maxWidth='md' sx={{ bgcolor: 'primary.main'}}>
+            <Typography variant="h1" align="center" color="primary.contrastText" wrap gutterBottom style={{ width: "100%", whiteSpace: 'nowrap' }}>
               One Piece-dle
             </Typography>
-            <Typography variant='h5' align="center" color='secondary' paragraph>
+            <Typography variant='h5' align="center" color='secondary.contrastText' paragraph>
               Guess today's One Piece character!
             </Typography>
             <div style={{ justifyContent: "center", alignItems: "center", display: "flex" }}>

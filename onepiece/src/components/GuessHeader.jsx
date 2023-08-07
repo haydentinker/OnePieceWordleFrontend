@@ -4,21 +4,21 @@ import Grid from '@mui/material/Unstable_Grid2';
 export const GuessHeader = () => {
   return (
     <>
-      <Grid container direction="row" columnSpacing={14}>
+      <Grid container direction="row" columnSpacing={10} color={'primary.contrastText'}>
         <Grid item >
-          <Typography sx={{ textDecoration: 'underline' }} paragraph>Character</Typography>
+          <Typography sx={{ textDecoration: 'underline' }} variant='h5'>Character</Typography>
         </Grid>
         <Grid item >
-          <Typography sx={{ textDecoration: 'underline' }} paragraph >Name</Typography>
+          <Typography sx={{ textDecoration: 'underline' }}variant='h5' >Name</Typography>
         </Grid>
         <Grid item >
-          <Typography sx={{ textDecoration: 'underline' }} paragraph >Debut</Typography>
+          <Typography sx={{ textDecoration: 'underline' }} variant='h5' >Debut</Typography>
         </Grid>
         <Grid item >
-          <Typography sx={{ textDecoration: 'underline' }} paragraph >Affiliations</Typography>
+          <Typography sx={{ textDecoration: 'underline' }} variant='h5' >Affiliations</Typography>
         </Grid>
         <Grid item >
-          <Typography sx={{ textDecoration: 'underline' }} paragraph>Occupation</Typography>
+          <Typography sx={{ textDecoration: 'underline' }} variant='h5'>Occupation</Typography>
         </Grid>
       </Grid>
 
