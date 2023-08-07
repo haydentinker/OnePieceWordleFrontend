@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, IconButton, TextField, Typography, AppBar, Card, CardActions, CardContent, CardMedia, CssBaseline, Toolbar, Container, Icon } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
+import { Grow } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import arrowDown from '../images/arrowDown.png';
@@ -23,7 +24,11 @@ export const Guess = ({ guesses }) => {
           height: '100px', 
           color: 'white'
         }} >
-          <Grid item className='box' sx={{
+          <Grow in={true}>
+          <Grid item 
+            className='box'
+            
+            sx={{
             alignItems: "center",
             justifyContent: "center",
             display: 'flex',
@@ -33,10 +38,15 @@ export const Guess = ({ guesses }) => {
               character1.Name === character2.Name ? "success.light"
                 : character1.Name.includes(character2) || character2.Name.includes(character1.Name) ? "warning.light"
                   : "error.light"
+
           }}>
             <Typography gutterBottom paragraph>Character</Typography>
           </Grid>
-          <Grid item className='box'
+          </Grow>
+          <Grow in={true} >
+          <Grid item 
+          className='box'
+         
             sx={{
               alignItems: "center",
               justifyContent: "center",
@@ -50,7 +60,11 @@ export const Guess = ({ guesses }) => {
             }}>
             <Typography gutterBottom paragraph >{character1.Name}</Typography>
           </Grid>
-          <Grid item xs={2} className='box' sx={{
+          </Grow>
+          <Grow in={true} >
+          <Grid item xs={2}className='box fade-in'
+             sx={{
+            
             alignItems: "center",
             justifyContent: "center",
             display: 'flex',
@@ -87,7 +101,10 @@ export const Guess = ({ guesses }) => {
             }
             <Typography gutterBottom paragraph sx={{ zIndex: 2, position: 'relative' }}>{character1.Debut}</Typography>
           </Grid>
-          <Grid item xs={2} className='box' sx={{
+          </Grow>
+          <Grow in={true} >
+          <Grid item xs={2} className='box fade-in'
+            sx={{
             alignItems: "center",
             justifyContent: "center",
             display: 'flex',
@@ -100,7 +117,10 @@ export const Guess = ({ guesses }) => {
           }}>
             <Typography gutterBottom paragraph >{character1.Affiliations}</Typography>
           </Grid>
-          <Grid item xs={2} className='box' sx={{
+          </Grow>
+          <Grow in={true} >
+          <Grid item xs={2} className='box fade-in'
+             sx={{
             alignItems: "center",
             justifyContent: "center",
             display: 'flex',
@@ -113,6 +133,7 @@ export const Guess = ({ guesses }) => {
           }} >
             <Typography gutterBottom paragraph>{character1.Occupation}</Typography>
           </Grid>
+          </Grow>
         </Grid>
 
       ))}
