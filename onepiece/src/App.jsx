@@ -3,6 +3,7 @@ import { Box, IconButton, TextField, Typography, Grid, Toolbar, Container } from
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import { GuessHeader } from './components/GuessHeader';
 import { Guess } from './components/Guess';
+import './App.css'
 const LOCAL_STORAGE_KEY = 'guesses';
 
 export const App = () => {

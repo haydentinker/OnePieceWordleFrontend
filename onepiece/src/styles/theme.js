@@ -8,7 +8,7 @@ const theme = createTheme({
   spacing: 8,
   palette:{
     
-    mode:'dark',
+    
   }
 });
 
